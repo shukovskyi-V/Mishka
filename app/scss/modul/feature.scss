@@ -1,0 +1,238 @@
+.features {
+
+  &__inner {
+    padding: 30px 30px;
+    max-width: 1150px;
+    margin: 0 auto;
+    box-sizing: border-box
+  }
+
+  &__title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    padding-top: 5px;
+    margin-bottom: 5px
+  }
+
+  &__week {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #63d1bb;
+    text-transform: uppercase;
+    margin-bottom: 25px
+  }
+
+  &__table,
+  &__text {
+    font-size: 15px;
+    font-weight: 400;
+    color: #444
+  }
+
+  &__text {
+    margin: 0 0 15px;
+    line-height: 24px
+  }
+
+  &__table {
+    line-height: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-collapse: collapse
+  }
+
+  &__row {
+    box-sizing: border-box;
+    border-bottom: 1px solid #ececec
+  }
+
+  &__cell {
+    padding: 10px 0
+  }
+
+  &__cell--name {
+    width: 38%
+  }
+
+  &__image {
+    margin: 0 auto;
+    width: 260px
+  }
+
+  &__price {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 20px 0;
+    text-align: center;
+    color: #444
+  }
+}
+
+@media (min-width: 768px) {
+  .features {
+    &__inner {
+      padding: 50px 50px
+    }
+
+    &__title-wrap,
+    &__wrap {
+      display: flex;
+      justify-content: space-between
+    }
+
+    &__wrap {
+      flex-wrap: wrap
+    }
+
+    &__title-wrap {
+      margin-bottom: 50px;
+      align-items: flex-end;
+      width: 100%
+    }
+
+    &__title,
+    &__week {
+      font-size: 43px;
+      font-weight: 700;
+      line-height: 50px;
+      margin-bottom: 0
+    }
+
+    &__week {
+      font-size: 17px;
+      line-height: 17px;
+      text-align: center;
+      margin-right: 25px
+    }
+
+    &__description,
+    &__description-wrap {
+      display: flex;
+      flex-direction: column
+    }
+
+    &__description-wrap {
+      width: 50%;
+      position: relative;
+      padding-right: 44px;
+      box-sizing: border-box;
+      justify-content: space-between
+    }
+
+    &__description {
+      min-height: 270px;
+      justify-content: flex-start
+    }
+
+    &__text {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 30px
+    }
+
+    &__table {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-top: 20px;
+      margin-bottom: 0
+    }
+
+    &__cell--name {
+      width: 33%
+    }
+
+    &__image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      z-index: -1;
+      width: 100%;
+      min-height: 404px;
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      font-size: 0
+    }
+
+    &__image img {
+      height: 404px;
+      width: auto
+    }
+
+    &__price {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      margin-top: 10px;
+      margin-bottom: 14px
+    }
+  }
+
+  @media (min-width: 1150px) {
+    .features {
+      &__inner {
+        padding: 60px 50px;
+
+      }
+
+      &__wrap {
+        position: relative
+      }
+
+      &__title-wrap {
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row-reverse;
+        z-index: 1;
+        margin-bottom: 50px
+      }
+
+      &__title {
+        font-size: 53px;
+        font-weight: 700;
+        line-height: 57px
+      }
+
+      &__week {
+        width: 16.66666667%;
+        margin-right: 0;
+        margin-top: 55px
+      }
+
+      &__description-wrap {
+        padding-left: 16.66666667%;
+        padding-right: 57px;
+        position: static
+      }
+
+      &__description {
+        min-height: 306px
+      }
+
+      &__table {
+        margin-top: 30px
+      }
+
+      &__price {
+        margin-top: 40px
+      }
+
+      &__image {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 50%
+      }
+
+      &__image img {
+        height: 636px
+      }
+    }
+  }
+}

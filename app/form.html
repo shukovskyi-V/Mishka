@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link href="css/style.min.css" rel="stylesheet">
+</head>
+<body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-mail" viewBox="0 0 32 32">
+        <path
+                d="M28 5H4a4 4 0 0 0-4 4v13a4 4 0 0 0 4 4h24a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4zM2 10.25l6.999 5.25L2 20.75v-10.5zM30 22c0 1.104-.898 2-2 2H4c-1.103 0-2-.896-2-2l7.832-5.875 4.368 3.277a3 3 0 0 0 3.599 0l4.369-3.277L30 22zm0-1.25l-7-5.25 7-5.25v10.5zm-12.801-2.148c-.35.263-.763.4-1.199.4s-.851-.139-1.2-.4L10.665 15.5l-.833-.625L2 9.001V9c0-1.103.897-2 2-2h24c1.102 0 2 .897 2 2l-12.801 9.602z"/>
+    </symbol>
+    <symbol id="icon-search" viewBox="-0.8 -0.8 17.6 17.6">
+        <path
+                d="M16.47 14.93l-3.415-3.415A7.67 7.67 0 0 0 14.6 6.899C14.6 2.646 11.153-.8 6.9-.8S-.8 2.646-.8 6.899s3.446 7.7 7.699 7.7c1.734 0 3.326-.58 4.613-1.546l3.417 3.416c.203.202.418.33.771.33a1.1 1.1 0 0 0 1.1-1.1c0-.24-.061-.499-.33-.769zM1.399 6.899a5.5 5.5 0 1 1 11 0c0 3.038-2.462 5.5-5.5 5.5s-5.5-2.461-5.5-5.5z"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24.829 24.333">
+        <path
+                d="M17.321 24.333h-1.115c-4.904-.58-8.497-2.857-11.11-5.772C2.473 15.637.402 11.875 0 6.817V5.459c.091-.921.544-1.55 1.067-2.086.65-.666 1.63-1.522 2.522-1.553.659-.022 1.78.451 2.232 1.066.388.53.595 1.59.775 2.378.185.797.6 1.95.485 2.717-.176 1.196-1.764 1.703-2.231 2.572 1.551 3.721 4.089 6.456 7.472 8.345.847-.465 1.595-1.864 2.767-1.892.428-.012.972.209 1.406.34.477.143.891.326 1.311.484.705.266 1.957.621 2.378 1.213.433.61.681 1.608.581 2.231-.194 1.234-2.227 2.603-3.444 3.059zM12.529 1.528c5.949 0 10.771 4.822 10.771 10.771h1.529C24.829 5.507 19.323 0 12.529 0v1.528z"/>
+        <path
+                d="M12.529 9.327v1.552a1.42 1.42 0 0 1 1.421 1.42h1.553a2.973 2.973 0 0 0-2.974-2.972zM12.529 6.246a6.054 6.054 0 0 1 6.056 6.054h1.588a7.642 7.642 0 0 0-7.644-7.641v1.587z"/>
+    </symbol>
+    <symbol id="icon-cart" viewBox="264.205 370.961 20.294 18.849">
+        <path
+                d="M283.75 378.19h-3.151l-3.407-6.814a.75.75 0 1 0-1.341.671l3.071 6.143h-9.138l3.072-6.143a.75.75 0 0 0-1.341-.671l-3.407 6.814h-3.151a.75.75 0 0 0 0 1.5h.157l.855 2.991a.737.737 0 0 0-.316.595c0 .396.309.71.697.739l1.656 5.795h12.697l1.656-5.795a.745.745 0 0 0 .698-.739.738.738 0 0 0-.316-.596l.854-2.991h.157a.75.75 0 1 0-.002-1.499zm-4.181 10.121h-10.433l-1.224-4.284h12.881l-1.224 4.284zm1.653-5.785h-13.739l-.81-2.836h15.359l-.81 2.836z"/>
+    </symbol>
+</svg>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <h1 class="visually-hidden">Интернет-магазин "Мишка"</h1>
+            <a href="index.html" class="header__logo">
+                <picture>
+                    <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                    <img src="img/logo-mobile.svg" width="86" height="35" alt="Logotype">
+                </picture>
+            </a>
+            <button class="main-nav__toggle main-nav__toggle--closed" type="button" title="Меню">Меню</button>
+            <nav class="main-nav main-nav--closed">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог
+                        товаров</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link main-nav__link--form" href="form.html">Вязание
+                        на
+                        заказ</a></li>
+                </ul>
+                <ul class="main-nav__user-list">
+                    <li class="main-nav__item">
+                        <a class="main-nav__link main-nav__link--search" href="#">
+                            <svg width="18" height="19">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+                            </svg>
+                            Поиск по сайту
+                        </a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link main-nav__link--basket" href="#">
+                            <svg width="21" height="18">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cart"></use>
+                            </svg>
+                            Корзина: <span class="main-nav--basket">пока пуста</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <section class="content">
+            <div class="content__inner">
+                <ul class="content__nav">
+                    <li class="content__nav-item content__nav-item--catalog">
+                        <a class="content__nav-link" href="catalog.html">Новые поступления</a>
+                    </li>
+                    <li class="content__nav-item content__nav-item--sale">
+                        <a class="content__nav-link" href="form.html">Распродажа</a>
+                    </li>
+                    <li class="content__nav-item content__nav-item--delivery">
+                        <span class="content__nav-delivery">Бесплатная доставка по России</span>
+                    </li>
+                </ul>
+                <h2 class="content__title">Вязание на заказ</h2>
+            </div>
+        </section>
+        <section class="order">
+            <form class="order__form" action="#">
+                <div class="order__form-wrap">
+                    <p class="order__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму
+                        заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+                </div>
+                <div class="order__category order__category--type">
+                    <div class="order__category-inner">
+                        <div class="order__title-wrap order__title-wrap--contacts">
+                            <h3 class="order__title order__title--type">Тип</h3>
+                        </div>
+                        <div class="order__list order__list--type">
+                            <input class="order__input order__input--radio" type="radio" name="type"
+                                   value="Аксессуар для интерьера" id="interior" checked="">
+                            <label class="order__label order__label--type" for="interior">Аксессуар для
+                                интерьера</label>
+                            <input class="order__input order__input--radio" type="radio" name="type"
+                                   value="Детская игрушка" id="toys">
+                            <label class="order__label order__label--type" for="toys">Детская игрушка</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="order__category order__category--color">
+                    <div class="order__category-inner order__category-inner--color">
+                        <div class="order__title-wrap order__title-wrap--contacts">
+                            <h3 class="order__title order__title--color">Цвет</h3>
+                        </div>
+                        <div class="order__list order__list--color">
+                            <input class="order__input order__input--checkbox" name=" Color White" type="checkbox"
+                                   value="Белый" id="white"
+                                   checked="">
+                            <label class="order__label order__label--color" for="white">Белый</label>
+                            <input class="order__input order__input--checkbox" name="Color Grey" type="checkbox"
+                                   value="Серый" id="gray"
+                                   checked="">
+                            <label class="order__label order__label--color" for="gray">Серый</label>
+                            <input class="order__input order__input--checkbox" name="Color Tiffani" type="checkbox"
+                                   value="Тиффани"
+                                   id="tiffany">
+                            <label class="order__label order__label--color" for="tiffany">«Тиффани»</label>
+                            <input class="order__input order__input--checkbox" name="Color Black" type="checkbox"
+                                   value="Черный"
+                                   id="black">
+                            <label class="order__label order__label--color" for="black">Черный</label>
+                            <input class="order__input order__input--checkbox" name="Color Pink" type="checkbox"
+                                   value="Розовый"
+                                   id="pink">
+                            <label class="order__label order__label--color" for="pink">Розовый</label>
+                            <input class="order__input order__input--checkbox" name="Color Orange" type="checkbox"
+                                   value="Оранжевый"
+                                   id="orange">
+                            <label class="order__label order__label--color" for="orange">Оранжевый</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="order__category order__category--name">
+                    <div class="order__category-inner">
+                        <div class="order__title-wrap order__title-wrap--name">
+                            <h3 class="order__title order__title--name">ФИО</h3>
+                        </div>
+                        <div class="order__list  order__list--name">
+                            <div class="order__item">
+                                <label class="order__label order__label--name" for="field-name">Имя:</label>
+                                <input class="order__field order__field--name" type="text" name="field-name"
+                                       id="field-name" placeholder="Введите ваше имя*" required="">
+                            </div>
+                            <div class="order__item">
+                                <label class="order__label order__label--name" for="field-surname">Фамилия:</label>
+                                <input class="order__field order__field--name" type="text" name="field-surname"
+                                       id="field-surname" placeholder="Укажите фамилию*" required="">
+                            </div>
+                            <div class="order__item">
+                                <label class="order__label order__label--name" for="field-patronymic">Отчество:</label>
+                                <input class="order__field order__field--name" type="text" name="field-patronymic"
+                                       id="field-patronymic" placeholder="Отчество, если желаете">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order__category order__category--contacts">
+                    <div class="order__category-inner order__category-inner--wrap">
+                        <div class="order__title-wrap order__title-wrap--contacts">
+                            <h3 class="order__title order__title--tel">Тел</h3>
+                        </div>
+                        <div class="order__list  order__list--phone">
+                            <input class="order__field order__field--tel" type="tel" name="field-tel"
+                                   placeholder="+7 XXX XX XX*" required>
+                            <svg width="25" height="24">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use>
+                            </svg>
+                        </div>
+                        <div class="order__title-wrap order__title-wrap--contacts">
+                            <h3 class="order__title order__title--email">E-mail</h3>
+                        </div>
+                        <div class="order__list  order__list--email">
+                            <input class="order__field order__field--email" type="email" name="field-email"
+                                   placeholder="Ваш Email*" required>
+                            <svg width="25" height="24">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-mail"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="order__category order__category--extra">
+                    <div class="order__category-inner">
+                        <div class="order__title-wrap order__title-wrap--extra">
+                            <h3 class="order__title order__title--extra">Доп</h3>
+                        </div>
+                        <div class="order__list  order__list--extra">
+                            <textarea class="order__field order__field--extra" name="extra" rows="6"
+                                      placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="order__category">
+                    <div class="order__category-inner order__category-inner--submit">
+                        <span class="order__required"><sup>*</sup>Поля обязательны для заполнения</span>
+                        <button class="btn order__btn" type="submit" value="Отправить заказ">Отправить заказ</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer__inner">
+        <a href="index.html" class="footer__item footer__item--logo">
+            <img src="img/logo-footer.svg" alt="Mishka логотип">
+        </a>
+        <div class="footer__item footer__item--social">
+            <div class="footer__social-wrap">
+                <a class="footer__social-link footer__social-link--in" target="_blank"
+                   href="https://www.instagram.com/">
+                    <img src="img/icon-insta.svg" alt="Instagram link">
+                    Instagram
+                </a>
+                <a class="footer__social-link footer__social-link--fb" target="_blank" href="https://www.facebook.com/">
+                    <img src="img/icon-fb.svg" alt="Facebook link">
+                    Facebook
+                </a>
+                <a class="footer__social-link footer__social-link--tw" target="_blank" href="https://twitter.com/">
+                    <img src="img/icon-twitter.svg" alt="Twitter link">
+                    Twitter
+                </a>
+            </div>
+        </div>
+        <div class="footer__item footer__item--dev">
+            <a class="footer__dev-link" href="#">
+                <span>Разработано</span>
+                <small>ZHUKOVSKYI</small>
+            </a>
+        </div>
+    </div>
+</footer>
+<script>
+    document.querySelector(".main-nav").classList.remove("main-nav--nojs");
+    document.querySelector(".main-nav__toggle").classList.remove("main-nav__toggle--nojs");
+</script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

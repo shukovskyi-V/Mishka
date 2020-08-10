@@ -1,0 +1,145 @@
+.footer {
+    background-color: #f1f1f1;
+
+    &__inner {
+        max-width: 1150px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 30px
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80px;
+        margin: 0
+    }
+
+    &__item--logo {
+        display: none
+    }
+
+    &__item--logo {
+        svg {
+            &:hover {
+                fill: #46c1ae
+            }
+        }
+    }
+
+    &__item--logo {
+        svg {
+            &:active {
+                fill: #46c1ae;
+                opacity: .3
+            }
+        }
+    }
+
+    &__item--social {
+        font-size: 0;
+        border-bottom: 1px solid #e5e5e5
+    }
+
+    &__item--dev {
+        font-size: 19px;
+        line-height: 18px;
+        font-weight: 700
+    }
+
+    &__social-link,
+    &__social-wrap {
+        display: flex
+    }
+
+    &__social-link {
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px
+    }
+
+    &__social-link svg {
+        fill: #231f20
+    }
+
+    &__social-link--fb {
+        margin: 0 30px
+    }
+
+    &__social-link {
+        &:hover {
+            svg {
+                fill: #46c1ae
+            }
+        }
+
+        &__social-link {
+            &:active {
+                svg {
+                    fill: #46c1ae;
+                    opacity: .3
+                }
+            }
+        }
+    }
+
+    &__dev-link {
+        text-decoration: none;
+        display: flex;
+        align-items: flex-start;
+        color: #000
+    }
+
+    &__dev-link img {
+        width: 27px;
+        height: 34px
+    }
+
+    &__dev-link span {
+        margin-right: 30px;
+       
+    }
+
+    &__dev-link {
+        &:hover {
+            opacity: .6
+        }
+    }
+
+    &__dev-link {
+        &:active {
+            opacity: .3
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .footer {
+        &__inner {
+            padding: 0 50px;
+            display: flex
+        }
+
+        &__item {
+            width: 35%;
+            min-height: 143px
+        }
+
+        &__item--logo {
+            display: flex;
+            justify-content: flex-start
+        }
+
+        &__item--dev {
+            justify-content: flex-end;
+            align-items: center;
+            padding-top: 5px
+        }
+
+        &__inner {
+            padding: 0 50px
+        }
+    }
+}

@@ -1,0 +1,240 @@
+.comment {
+    margin-bottom: 45px;
+
+    &__inner {
+        max-width: 1150px;
+        margin: 0 auto
+    }
+
+    &__wrap {
+        padding: 0 30px
+    }
+
+    &__title {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        margin: 0 0 25px
+    }
+
+    &__item {
+        margin-bottom: 30px
+    }
+
+    &__text {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #444;
+        margin: 0 0 30px
+    }
+
+    &__user {
+        margin-bottom: 30px
+    }
+
+    &__author {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        font-style: normal
+    }
+
+    &__link {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 30px;
+        display: block;
+        color: #000;
+        text-decoration: none
+    }
+
+    &__slider,
+    &__slider-btn {
+        display: flex;
+        position: relative;
+        font-size: 0;
+
+    }
+
+    &__slider {
+        margin-bottom: 38px;
+        margin-left: auto;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 50%;
+            height: 50px;
+            border-right: 1px solid #ececec
+        }
+    }
+
+    &__slider-btn {
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50px;
+        border: 1px solid #ececec;
+        background: transparent;
+
+
+        &:hover {
+            opacity: .6
+        }
+
+        &:active {
+            opacity: .3
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .comment {
+        &.comment__wrap {
+            padding: 0 50px
+        }
+
+        &__inner {
+            background-color: #fff;
+            background-image: url('../img/review@1x.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            min-height: 457px;
+            margin-bottom: 65px
+        }
+
+        &__wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-top: 77px;
+            padding-bottom: 15px
+        }
+
+        &__title {
+            font-size: 43px;
+            font-weight: 700;
+            line-height: 50px;
+            margin-bottom: 48px;
+            order: -5;
+        }
+
+        &__item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            margin-bottom: 0
+        }
+
+        &__text {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 30px;
+            margin: 0 0 58px
+        }
+
+        &__author {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 5px
+        }
+
+        &__slider {
+            width: 175px;
+            align-self: flex-end;
+            border: 0
+        }
+
+        &__slider {
+            &::after {
+                display: none
+            }
+        }
+
+        &__btn {
+            order: -4;
+            width: 175px;
+            align-self: flex-start
+        }
+    }
+}
+
+@media (min-width:1150px) {
+    .comment {
+        &__wrap {
+            padding: 0 50px;
+
+        }
+
+        &__inner {
+            min-width: 510px;
+            background-position: 50px 0;
+            background-size: contain;
+            margin-bottom: 70px
+        }
+
+        &__wrap {
+            padding-top: 70px
+        }
+
+        &__text {
+            margin-bottom: 40px;
+            margin-right: 100px
+        }
+
+        &__item,
+        &__title {
+            padding-left: 16.66666667%
+        }
+
+        &__title {
+            font-size: 53px;
+            font-weight: 700;
+            line-height: 57px
+        }
+
+        &__btn {
+            margin-top: 8px
+        }
+
+        &__wrap {
+            padding: 0 50px
+        }
+
+        &__inner {
+            background-position: 50px 0;
+            background-size: contain;
+            margin-bottom: 70px
+        }
+
+        &__wrap {
+            padding-top: 70px
+        }
+
+        &__text {
+            margin-bottom: 40px;
+            margin-right: 100px;
+
+        }
+
+        &__item,
+        &__title {
+            padding-left: 16.66666667%
+        }
+
+        &__title {
+            font-size: 53px;
+            font-weight: 700;
+            line-height: 57px
+        }
+
+        &__btn {
+            margin-top: 8px
+        }
+    }
+}

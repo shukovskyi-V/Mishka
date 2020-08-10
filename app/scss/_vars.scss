@@ -1,0 +1,73 @@
+
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  margin: 0 auto;
+  min-width: 320px;
+  padding: 0;
+  background-color: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 0;
+  border: 2px solid #444;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  outline: 0;
+  color: #444;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 700;
+  width: 100%;
+
+
+  &:hover {
+    background-color: #444;
+    color: #fff
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, .3)
+  }
+}
+
+$maxWidth: 1280;
+@mixin responsive-font($maxSize, $minSize) {
+  $addSize: $maxSize - $minSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #010000;
+  @include responsive-font(53, 27);
+  font-weight: 700;
+  line-height: 30px;
+}

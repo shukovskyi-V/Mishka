@@ -1,0 +1,188 @@
+.about {
+  margin-bottom: 50px
+}
+
+.about {
+  &::before {
+    content: "";
+    width: 100%;
+    max-width: 1220px;
+    height: 7px;
+    display: block;
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-size: contain;
+    background-repeat: repeat-x;
+    margin: 0 auto;
+    margin-bottom: 27px
+  }
+
+  &__inner {
+    max-width: 1150px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 30px
+  }
+
+  &__title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0
+  }
+
+  &__item {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    padding-top: 52px;
+    position: relative;
+    margin-top: 32px
+  }
+
+  &__item--materials {
+    svg {
+      position: absolute;
+      top: 0;
+      left: 5px;
+      width: 33px;
+      height: 38px
+    }
+  }
+
+  &__item--style {
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 47px;
+      height: 27px
+    }
+  }
+
+  &__item--like,
+  &__item--manual {
+    svg {
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      width: 34px;
+      height: 27px
+    }
+  }
+
+  &__item--manual {
+    svg {
+      top: 0;
+      width: 35px;
+      height: 34px
+    }
+  }
+
+  &__item--box,
+  &__item--support {
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 55px;
+      height: 23px
+    }
+  }
+
+  &__item--box {
+    svg {
+      left: 5px;
+      width: 33px;
+      height: 32px
+    }
+  }
+
+  &__item--box {
+    svg {
+      left: 5px;
+      width: 33px;
+      height: 32px
+    }
+  }
+}
+@media (min-width:480px) {
+  .about__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about__item {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .about {
+    margin-bottom: 60px;
+
+    &::before {
+      height: 17px;
+      margin-bottom: 50px
+    }
+
+    &__inner {
+      padding: 0 50px
+    }
+
+    &__title {
+      font-size: 43px;
+      font-weight: 700;
+      line-height: 50px;
+      margin-bottom: 20px
+    }
+
+    &__item {
+      width: 49%;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 22px;
+      margin-bottom: 26px
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .about {
+    margin-bottom: 65px;
+
+    &::before {
+      height: 23px;
+      margin-bottom: 60px
+    }
+
+    &__inner {
+      padding: 0 50px
+    }
+
+    &__wrap {
+      padding: 0 16.6%
+    }
+
+    &__title {
+      font-size: 53px;
+      font-weight: 700;
+      line-height: 57px
+    }
+
+    &__list {
+      width: 940px;
+    }
+
+    &__item {
+      width: 33%;
+
+    }
+  }
+}
